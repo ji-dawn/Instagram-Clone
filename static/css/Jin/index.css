@@ -1,0 +1,15 @@
+body {
+  background-color: pink;
+}
+
+.side {
+  position: fixed;
+  width: 7%;
+  background-color: antiquewhite;
+}
+
+.main-profile {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
