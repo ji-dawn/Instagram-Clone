@@ -1,0 +1,38 @@
+.wrap {
+  height: 100%;
+}
+.scroll {
+  overflow: auto;
+}
+.link_list {
+  display: flex;
+  align-items: center;
+}
+.link_list li {
+  margin-left: 20px;
+}
+
+.link_list li:first-child {
+  margin: 0;
+}
+
+.state_btn {
+  border: none;
+  padding: 0;
+}
+
+.feed_profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile .profile_img {
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
