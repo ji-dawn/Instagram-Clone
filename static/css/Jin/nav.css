@@ -1,0 +1,60 @@
+/* nav ******************************************/
+/* nav bar */
+.nav {
+  position: relative;
+}
+
+.nav-bar {
+  position: relative;
+
+  height: 100vh;
+
+  padding: 8px 12px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: rgb(255, 146, 146); */
+  background-color: rgba(225, 0, 0, 0.4);
+}
+
+/* nav bar top */
+.nav-bar-top {
+  width: 48px;
+  height: 96px;
+  margin: 12px 0px 0px;
+  padding: 0px 0px 23px;
+
+  background-color: hotpink;
+}
+
+.instagram-icon {
+  margin: 4px 0px;
+  padding: 12px;
+}
+
+/* nav bar mid */
+.nav-bar-mid div {
+  margin: 4px 0px;
+  padding: 12px;
+
+  background-color: yellow;
+}
+
+.main-profile {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* nav bar end */
+.nav-bar-end {
+  margin-top: auto; /* Locate .nav-bar-end at the end of the column*/
+
+  background-color: green;
+}
+
+.nav-bar-end div {
+  margin: 4px 0px;
+  padding: 12px;
+}

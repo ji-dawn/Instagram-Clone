@@ -1,0 +1,35 @@
+:root {
+  --secondary-text-color: rgb(142, 142, 142);
+  --post-img-width: 452px;
+  --post-img-height: 454px;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* To remove unnecessary padding */
+svg {
+  display: block;
+}
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  font-weight: 600;
+}

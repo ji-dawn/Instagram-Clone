@@ -12,7 +12,7 @@ app.use("/static", express.static(__dirname + "/static"));
 
 /* Routing */
 app.get("/", (req, res) => {
-  res.render("Jin/index"); /* Start path from /views/ */
+  res.render("index"); /* Start path from /views/ */
 });
 
 /* Binding */
