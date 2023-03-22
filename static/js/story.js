@@ -28,6 +28,7 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
 let onPlay = true;
 $('#btn-play').click(() => {
   if (onPlay) {
