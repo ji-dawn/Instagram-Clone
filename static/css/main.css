@@ -10,20 +10,24 @@
   box-sizing: border-box;
   border-bottom: 1px solid #dbdbdb;
 }
+
 .header .header_wrap {
   height: 100%;
   max-width: 1066px;
   margin: 0 auto;
 }
+
 .header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
+
 .header .inner .logo {
   display: flex;
 }
+
 .header .inner .logo span {
   display: inline-block;
 }
@@ -35,6 +39,7 @@
   width: 200px;
   height: 30px;
 }
+
 .header .inner .input_box input {
   height: 100%;
   width: 100%;
@@ -62,6 +67,7 @@
   top: 55px;
   background: #f8f9fa;
 }
+
 .main .container {
   display: flex;
   max-width: 1066px;
@@ -75,6 +81,7 @@
   box-sizing: border-box;
   margin-right: 40px;
 }
+
 .contents_left .inner {
   position: relative;
 }
@@ -93,6 +100,7 @@
 .feed_profile .profile p {
   line-height: 1.4;
 }
+
 .feed_profile .profile .profile_id {
   font-size: 15px;
   font-weight: bold;
@@ -105,9 +113,11 @@
   border-bottom: 1px solid;
   text-align: center;
 }
+
 .feed_box img {
   width: 70%;
 }
+
 .feed_info {
   position: relative;
   padding: 10px 20px;
@@ -124,10 +134,12 @@
   align-items: center;
   margin-bottom: 10px;
 }
+
 .feed_comments .feed_likes {
   display: flex;
   align-items: center;
 }
+
 .feed_comments .comments_margin {
   margin-bottom: 10px;
 }
@@ -140,31 +152,39 @@
 .feed_comments .comment_list .comments_info li {
   margin-bottom: 3px;
 }
+
 .comments_info .comments_tit {
   font-size: 15px;
   line-height: 1.4;
 }
+
 .comments_info .comments_tit .user_id {
   font-weight: bold;
 }
+
 .comments_info .comments_tit .comment_contents {
   padding-left: 5px;
 }
+
 .feed_comments .comment_list .feed_time {
   line-height: 1.4;
 }
+
 .feed_comments .comment_list .feed_time .time {
   font-size: 13px;
   color: #adb5bd;
 }
+
 .comments_form {
   position: relative;
 }
+
 .comments_form .input_box {
   position: relative;
   width: 100%;
   height: 45px;
 }
+
 .comments_form .input_box input {
   width: 100%;
   height: 100%;
@@ -176,19 +196,67 @@
   border-bottom: none;
   font-size: 15px;
 }
+
 .comments_form .button_box {
   position: absolute;
   right: 10px;
   top: 11px;
 }
+
 .comments_form .button_box .btn {
   border: none;
 }
+
 .comments_form .button_box .btn span {
   font-size: 15px;
   color: #bfdffd;
 }
 
-.like-btn {
-  width: auto;
+/* 오른쪽 영역 */
+.main .container .contents_right {
+  /* position: fixed;
+  left: calc(100% - 712px);  */
+  width: 383px;
+  box-sizing: border-box;
+
 }
+
+.contents_right .aside .aside_profile {
+  padding: 10px 0;
+}
+
+.contents_right .aside .aside_profileprofile .profile_img {
+  width: 50px;
+}
+
+.contents_right .aside .pofile_info {
+  flex: 1;
+}
+
+.contents_right .aside .pofile_info .profile_intro {
+  width: 150px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size: 12px;
+  color: #8b8b8b;
+}
+
+.follow_info.follow_story {
+  padding-right: 0;
+}
+
+.follow_info.follow_story .follow_title span.sub_tit {
+  padding-right: 13px;
+}
+
+.follow_info.follow_story .profile_img {
+  border: 3px solid #fa5252;
+}
+
+.follow_btn .btn span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1c7ed6;
+}
+
