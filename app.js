@@ -1,6 +1,5 @@
 /* Using Express */
 const express = require("express");
-
 const app = express();
 
 /* Settings for port number */
