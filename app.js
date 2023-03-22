@@ -1,30 +1,39 @@
+/* Using Express */
 const express = require("express");
 const app = express();
+/* Settings for port number */
 const PORT = 8000;
-// static & views 설정
+
+/* Settings for port number */
 app.set("view engine", "ejs");
 app.set("/views", "views");
+/* Settings for static directory */
 app.use("/static", express.static(__dirname + "/static"));
+
+/* Routing */
 app.get("/", (req, res) => {
-  res.render("common");
+  res.render("index"); /* Start path from /views/ */
 });
+
+/* Binding */
 app.get("/contents", (req, res) => {
   res.render("contents")
 })
 app.get("/header", (req, res) => {
-  res.render("header")
+  res.render("shin/header")
 })
 app.get("/tagged", (req, res) => {
-  res.render("tagged")
+  res.render("shin/tagged")
 })
 app.get("/saved", (req, res) => {
-  res.render("saved")
+  res.render("shin/saved")
 })
-app.get("/common/tagged", (req, res) => {
-  res.render("tagged")
+app.get("/common", (req, res) => {
+  res.render("shin/common")
 })
 
 
+/* Bind and listen the connections on the specified host and port */
 /* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
 // 포트 열기
 app.listen(PORT, () => {
