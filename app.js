@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 /* Binding */
 app.get("/contents", (req, res) => {
-  res.render("contents")
+  res.render("shin/contents")
 })
 app.get("/header", (req, res) => {
   res.render("shin/header")
