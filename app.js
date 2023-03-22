@@ -16,8 +16,26 @@ app.get("/", (req, res) => {
 });
 
 /* Binding */
+app.get("/contents", (req, res) => {
+  res.render("contents")
+})
+app.get("/header", (req, res) => {
+  res.render("shin/header")
+})
+app.get("/tagged", (req, res) => {
+  res.render("shin/tagged")
+})
+app.get("/saved", (req, res) => {
+  res.render("shin/saved")
+})
+app.get("/common", (req, res) => {
+  res.render("shin/common")
+})
+
 
 /* Bind and listen the connections on the specified host and port */
+/* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
+// 포트 열기
 app.listen(PORT, () => {
   console.log(PORT + " is open!");
   console.log(`http://localhost:${PORT}`);
