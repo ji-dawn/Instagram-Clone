@@ -1,16 +1,24 @@
+/* Using Express */
 const express = require("express");
 const app = express();
+/* Settings for port number */
 const PORT = 8000;
-// static & views 설정
+
+/* Settings for port number */
 app.set("view engine", "ejs");
 app.set("/views", "views");
+/* Settings for static directory */
 app.use("/static", express.static(__dirname + "/static"));
+
+/* Routing */
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index"); /* Start path from /views/ */
 });
-/* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
-// 포트 열기
+
+/* Binding */
+
+/* Bind and listen the connections on the specified host and port */
 app.listen(PORT, () => {
-  console.log(PORT + "is open!");
+  console.log(PORT + " is open!");
   console.log(`http://localhost:${PORT}`);
 });
