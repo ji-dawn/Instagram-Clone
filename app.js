@@ -1,6 +1,7 @@
 /* Using Express */
 const express = require("express");
 const app = express();
+
 /* Settings for port number */
 const PORT = 8000;
 
@@ -37,6 +38,6 @@ app.get("/common", (req, res) => {
 /* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
 // 포트 열기
 app.listen(PORT, () => {
-  console.log(PORT + " is open!");
+  console.log(`${PORT} 'is open!`);
   console.log(`http://localhost:${PORT}`);
 });
