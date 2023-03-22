@@ -1,26 +1,29 @@
 body {
    margin: 0;
    padding: 0;
-   background-color: palevioletred;
+   /* background-color: palevioletred; */
    background-color: rgb(255, 255, 255);
 }
 
 * {
-   border: 1px solid blue;
+   /* border: 1px solid blue; */
 }
 
 section {
    padding: 0;
    margin: 0;
+   overflow-x: hidden;
+   display: flex;
+   flex-direction: column;
 }
 
 
 /*=============== 반응형 ===================================================*/
 /* 735 이상부터  */
 @media (min-width: 736px) {
-   .profile_main .container {
+   .container {
       padding: 60px 20px 0;
-      box-sizing: content-box;
+      box-sizing: border-box;
       width: calc(100% - 40px);
    }
 
@@ -45,17 +48,6 @@ section {
    }
 }
 
-/* 735px 이하부터 */
-@media (max-width: 735px) {
-   .header1 {
-      /* margin-left: 16px; */
-      margin-top: 16px;
-      margin-right: 16px;
-      margin-bottom: 24px;
-      width: calc(100% - 40px);
-      box-sizing: border-box;
-   }
-}
 
 
 
@@ -72,8 +64,8 @@ section {
    padding: 0;
    position: relative;
    flex-direction: column;
-   background-color: palevioletred;
-   /* background-color: rgb(255, 255, 255); */
+   /* background-color: palevioletred; */
+   background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -84,7 +76,7 @@ section {
    /* position: relative; */
    max-width: 935px;
    min-height: 100vh;
-   background-color: rgb(206, 255, 134);
+   /* background-color: rgb(206, 255, 134); */
 }
 
 /*============ header start ==========*/
@@ -98,7 +90,9 @@ section {
    height: 150px;
    margin-bottom: 44px;
    flex-shrink: 0;
-   background-color: pink;
+   flex-direction: row;
+   /* flex-basis: 0; */
+   /* background-color: pink; */
 }
 
 .profile-pic {
@@ -107,32 +101,11 @@ section {
    align-items: stretch;
    justify-content: center;
    flex-shrink: 0;
-   flex-basis: 0;
-   flex-grow: 1;
+   /* flex-grow: 1; */
    margin-right: 30px;
-   background-color: skyblue;
+   /* flex-direction: column; */
+   /* background-color: skyblue; */
 }
-
-/* 
-@media (max-width: 735px) {
-   .header1 {
-      height: 77px;
-   }
-
-   .profile-pic {
-      width: 77px;
-      height: 100%;
-      margin-right: 28px;
-      position: relative;
-      justify-content: left;
-      display: flex;
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: 0;
-
-   }
-} */
-
 
 
 .pofile-picture {
@@ -154,8 +127,57 @@ section {
    flex-basis: 30px;
    flex-grow: 2;
    font-size: 100%;
-   background-color: brown;
+   /* background-color: brown; */
 }
+
+@media (max-width: 735px) {
+   .header1 {
+      height: 84px;
+      margin-left: 16px;
+      margin-top: 16px;
+      margin-right: 16px;
+      margin-bottom: 24px;
+      width: calc(100% - 40px);
+      box-sizing: border-box;
+   }
+
+   .profile-pic {
+      width: 77px;
+      height: 77px;
+      margin-right: 28px;
+      position: relative;
+      justify-content: left;
+      display: flex;
+      /* flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 0; */
+   }
+
+   .pofile-picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      box-sizing: border-box;
+   }
+
+   .profile-section {
+      display: flex;
+      align-content: center;
+   }
+
+}
+
+@media (min-width:735px) {
+   .profile-pic {
+      margin-right: 30px;
+      flex-grow: 1;
+      flex-basis: 0;
+   }
+}
+
+
 
 .ps-row1 {
    display: flex;
@@ -165,8 +187,10 @@ section {
    min-width: 0;
    flex-direction: row;
    color: rgb(35, 35, 35);
-   background-color: yellow;
+   /* background-color: yellow; */
 }
+
+
 
 h2 {
    margin: 0;
@@ -204,7 +228,7 @@ h2 {
    margin-inline-end: 0px;
    /* padding-inline-start: 40px; */
    color: rgb(35, 35, 35);
-   background-color: lime;
+   /* background-color: lime; */
 }
 
 .proli:first-child {
@@ -232,7 +256,7 @@ h2 {
    padding: 0;
    position: relative;
    /* vertical-align: baseline; */
-   background-color: salmon;
+   /* background-color: salmon; */
 }
 
 .user-name2 {
@@ -250,13 +274,34 @@ h5 {
    line-height: 20px;
 }
 
+@media (max-width:735px) {
+
+   .prow {
+      margin-bottom: 3px;
+      box-sizing: border-box;
+      font-size: 80%;
+   }
+
+   .proli:first-child {
+      font-size: 100%;
+   }
+
+   .profile-edit {
+      padding: 4px 10px;
+   }
+
+   .ps-row2 {
+      margin-top: 3px;
+   }
+}
+
 /*============ header end ==========*/
 
 
 /*============ hilight start ==========*/
 .hilight-shell {
    display: flex;
-   background-color: tan;
+   /* background-color: tan; */
 }
 
 .hilight-box {
@@ -285,13 +330,13 @@ h5 {
    overflow-x: auto;
    overflow-y: hidden;
    scrollbar-width: none;
-   background-color: aqua;
+   /* background-color: aqua; */
    margin: 0;
    list-style: none;
 }
 
 .hili {
-   background-color: blue;
+   /* background-color: blue; */
    width: 125px;
    /* height: 100%; */
    align-items: center;
@@ -388,10 +433,10 @@ h5 {
    flex-direction: row;
    font-size: .75rem;
    vertical-align: baseline;
-   background-color: tomato;
+   /* background-color: tomato; */
 }
 
-.btn {
+.divbtn {
    color: rgb(38, 38, 38);
    cursor: pointer;
    display: flex !important;
@@ -410,19 +455,46 @@ h5 {
    font-weight: 600;
 }
 
-.btn:visited {
+.divbtn:visited {
    color: rgb(38, 38, 38);
 }
 
-.btn:not(:last-child) {
+.divbtn:not(:last-child) {
    margin-right: 60px;
 }
 
-
-.feed {
+.divicon {
    color: rgb(142, 142, 142);
-
+   font-size: 16px;
 }
+
+.divtext {
+   font-size: 16px;
+   margin-left: 6px;
+}
+
+@media (max-width:735px) {
+   .divbtn {
+      text-align: center;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      height: 44px;
+   }
+
+   .divbtn:not(:last-child) {
+      margin: 0;
+   }
+
+   .divicon {
+      font-size: 20px;
+   }
+
+   .divtext {
+      display: none;
+   }
+}
+
 
 .bookmark {
    color: rgb(142, 142, 142);
@@ -434,6 +506,7 @@ h5 {
 
 }
 
+
 .underBar {
    border-width: 0;
    height: 1px;
@@ -441,7 +514,7 @@ h5 {
    margin: 0;
    padding: 0;
    background-color: rgb(219, 219, 219);
-   background-color: black;
+   /* background-color: black; */
 }
 
 /*============ divBar-button end ==========*/
@@ -463,7 +536,7 @@ h5 {
    align-content: stretch;
    flex-grow: 1;
    /* background-color: teal; */
-   /* background-color: transparent; */
+   background-color: transparent;
 }
 
 .content-row {
@@ -477,7 +550,7 @@ h5 {
    flex-grow: 1;
    flex-basis: 0%; */
    position: relative;
-   background-color: pink;
+   /* background-color: pink; */
    width: 100%;
 }
 
@@ -524,18 +597,20 @@ h5 {
    height: 100%;
 }
 
-.icon {
-   color: rgb(142, 142, 142);
-}
 
-/*============ divBar-button end ==========*/
+/*============ contents-box end ==========*/
 
+/*============ tagged start ==========*/
+/* .tagged{
+   display: none;
+} */
+/*============ tagged end ==========*/
 
 /*============ under-blank start ==========*/
 .under-blank {
    height: 50px;
    width: 100%;
-   background-color: pink;
+   /* background-color: pink; */
    box-sizing: border-box;
    position: relative;
    display: block;
@@ -558,7 +633,7 @@ footer {
    margin: 0;
    flex-shrink: 0;
    align-items: stretch;
-   background-color: brown;
+   /* background-color: brown; */
 }
 
 .footer-div {

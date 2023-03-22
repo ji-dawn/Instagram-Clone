@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로필 통합본</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!-- font awasome -->
+    <script src="https://kit.fontawesome.com/b29325fb21.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- profile-main : 바탕화면 -->
+    <div class="profile_main">
+        <!-- section : 컨테이너, 하단공백, 푸터 들어감 -->
+        <section>
+            <!-- container : 헤더, 하이라이트, 중간버튼, 콘텐츠 들어감 -->
+            <div class="container">
+                <!-- header : 프로필 상단 -->
+                <!-- <header> -->
+                <!-- header1 -->
+                <div class="header1">
+                    <div class="profile-pic">
+                        <div class="profile-picture"><img class="pofile-picture" src="/static/src/bird.jpg" alt="오목눈이">
+                        </div>
+                    </div>
+                    <!-- profile section 1  -->
+                    <div class="profile-section">
+                        <div class="prow ps-row1">
+                            <h2 class="user-name">PHOENIX</h2>
+                            <button class="profile-edit">프로필 편집</button>
+                        </div>
+                        <ul class="prow ps-row2">
+                            <li class="contents-num proli">
+                                <div>게시물 <span> 15</span></div>
+                            </li>
+                            <li class="follower proli">
+                                <div>팔로워 <span> 56</span></div>
+                            </li>
+                            <li class="following proli">
+                                <div>팔로우 <span> 36</span></div>
+                            </li>
+                        </ul>
+                        <div class="prow ps-row3">
+                            <span class="user-name2">불사조</span>
+                            </br>
+                            <h5 class="profile-ment">동그랗다</h5>
+                        </div>
+                    </div>
+                    <!-- profile section 1 끝 -->
+                    <!-- profile section 2 시작 -->
+                    <!-- <div class="profile-section2">
+                        <div class="ps2-row1">
+                            <h2 class="user-name2">PHOENIX</h2>
+                            <button class="profile-edit2">프로필 편집</button>
+                        </div>
+                        <ul class="ps2-row2">
+                            <li class="contents-num2 proli">
+                                <div>게시물 <span> 15</span></div>
+                            </li>
+                            <li class="follower2 proli">
+                                <div>팔로워 <span> 56</span></div>
+                            </li>
+                            <li class="following2 proli">
+                                <div>팔로우 <span> 36</span></div>
+                            </li>
+                        </ul>
+                        <div class="ps2-row3">
+                            <span class="user-name2_2">불사조</span>
+                            </br>
+                            <h5 class="profile-ment2">동그랗다</h5>
+                        </div>
+                    </div> -->
+
+                    <!-- profile section 2 끝 -->
+                </div>
+                <!-- </header> -->
+                <!--======================= hilight 시작 ====================-->
+                <div class="hilight-shell">
+                    <div class="hilight-box">
+                        <ul class="hi-list">
+                            <li class="hili">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                    <span class="hititle">Now_Playing</span>
+                                </div>
+                            </li>
+                            <li class="hili">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                    <span class="hititle">Now_Playing</span>
+                                </div>
+                            </li>
+                            <li class="hili">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                    <span class="hititle">Now_Playing</span>
+                                </div>
+                            </li>
+                            <li class="hili">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                    <span class="hititle">Now_Playing</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- =========================hilight 끝======================== -->
+                <!-- =========================divBar-button 시작======================== -->
+                <div class="divBar-button">
+                    <a href="#" class="divbtn uploaded"><i class="divicon fa-solid fa-table-cells"><span
+                                class="divtext">게시물</span></i>
+                    </a>
+                    <a href="#" class="divbtn bookmark"><i class="divicon fa-solid fa-bookmark"><span
+                                class="divtext">저장됨</span></i>
+                    </a>
+                    <a href="#" class="divbtn tagged"><i class="divicon fa-solid fa-image-portrait"><span
+                                class="divtext">태그됨</span></i>
+                    </a>
+                </div>
+                <hr class="underBar">
+                <!-- =========================divBar-button 끝======================== -->
+                <!-- =========================contents 시작======================== -->
+                <!-- 콘텐츠 -->
+                <div class="contents">
+                    <%- include ("./includes/contents")%>
+                </div>
+                <!-- 저장됨 -->
+                <div class="saved">
+                    <%- include ("./includes/saved")%>
+                </div>
+                <!-- 태그됨 -->
+                <div class="tagged">
+                    <%- include ("./includes/tagged")%>
+                </div>
+                <!-- =========================contents 끝======================== -->
+            </div>
+            <!--====================== container 끝=================-->
+
+            <!-- ===============under-blank 시작================== -->
+            <div class="under-blank"></div>
+            <!-- ===============under-blank 끝================== -->
+
+            <!-- ===============footer 시작===============-->
+            <footer>
+                <div class="footer-div">
+                    <a href="#" class="footer-inner">Meta</a>
+                    <a href="#" class="footer-inner">소개</a>
+                    <a href="#" class="footer-inner">블로그</a>
+                    <a href="#" class="footer-inner">이용정보</a>
+                    <a href="#" class="footer-inner">도움말</a>
+                    <a href="#" class="footer-inner">API</a>
+                    <a href="#" class="footer-inner">개인정보처리방침</a>
+                    <a href="#" class="footer-inner">약관</a>
+                    <a href="#" class="footer-inner">인기계정</a>
+                    <a href="#" class="footer-inner">위치</a>
+                    <a href="#" class="footer-inner">Instagramm Lite</a>
+                    <a href="#" class="footer-inner">연락처 업로드 & 비사용자</a>
+                    <a href="#" class="footer-inner">Meta Verified</a>
+                </div>
+            </footer>
+            <!-- ===============footer 끝===============-->
+        </section>
+        <!-- ===============section 끝===============-->
+    </div>
+    <!-- ===============profile-main 끝===============-->
+
+</body>
+
+</html>
