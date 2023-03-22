@@ -1,7 +1,10 @@
 :root {
+  --nav-bar-svg: 24px;
+  --nav-bar-border-color: rgb(219, 219, 219);
   --secondary-text-color: rgb(142, 142, 142);
   --post-img-width: 452px;
   --post-img-height: 454px;
+  --font-size: 16px;
 }
 
 * {
@@ -9,6 +12,8 @@
 
   margin: 0;
   padding: 0;
+
+  font-size: var(--font-size);
 }
 
 button {
@@ -22,9 +27,16 @@ button {
 /* To remove unnecessary padding */
 svg {
   display: block;
+
+  margin: 0;
+  padding: 0;
 }
+
 img {
   display: block;
+
+  margin: 0;
+  padding: 0;
 }
 
 a {

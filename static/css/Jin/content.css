@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
 
-  background-color: rgb(0, 47, 255);
+  background-color: rgba(0, 47, 255, 0.127);
 }
 
 .content-main {
@@ -36,11 +36,11 @@
 }
 
 .top-bar-list div button div img {
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
 
-  margin: 7px;
+  margin: 5px;
 }
 
 /* Post ******************************************/
