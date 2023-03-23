@@ -30,26 +30,52 @@ const swiper = new Swiper('.swiper', {
 });
 
 let onPlay = true;
+let isPaused = swiper.autoplay.paused;
 $('#btn-play').click(() => {
   if (onPlay) {
-    swiper.autoplay.stop();
-    $('.swiper-pagination-bullet-active b').css(
-      'animation-play-state',
-      'paused'
-    );
-    $('#btn-play').html(
-      '<button type="button" id="btn-play"><i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i></button>'
-    );
+    swiper.autoplay.pause();
+    onPlaySetAttr();
     onPlay = false;
   } else {
-    swiper.autoplay.start();
-    $('.swiper-pagination-bullet-active b').css(
-      'animation-play-state',
-      'running'
-    );
-    $('#btn-play').html(
-      '<button type="button" id="btn-play"><i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i></button>'
-    );
+    swiper.autoplay.resume();
+    onPausedSetAttr();
     onPlay = true;
   }
 });
+
+$('.swiper-button-prev').click(() => {
+  if (!isPaused) {
+    swiper.autoplay.pause();
+    onPlaySetAttr();
+  } else {
+    swiper.autoplay.resume();
+    onPausedSetAttr();
+  }
+});
+
+$('.swiper-button-next').click(() => {
+  if (!isPaused) {
+    swiper.autoplay.pause();
+    onPlaySetAttr();
+  } else {
+    swiper.autoplay.resume();
+    onPausedSetAttr();
+  }
+});
+
+function onPlaySetAttr() {
+  $('.swiper-pagination-bullet-active b').css('animation-play-state', 'paused');
+  $('#btn-play').html(
+    '<button type="button" id="btn-play"><i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i></button>'
+  );
+}
+
+function onPausedSetAttr() {
+  $('.swiper-pagination-bullet-active b').css(
+    'animation-play-state',
+    'running'
+  );
+  $('#btn-play').html(
+    '<button type="button" id="btn-play"><i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i></button>'
+  );
+}
