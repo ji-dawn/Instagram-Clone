@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>프로필 통합본</title>
     <!-- css -->
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/shin/index.css">
     <!-- font awasome -->
     <script src="https://kit.fontawesome.com/b29325fb21.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script defer src="/static/js/shin/profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
     <!-- profile-main : 바탕화면 -->
@@ -24,7 +28,7 @@
                 <!-- header1 -->
                 <div class="header1">
                     <div class="profile-pic">
-                        <div class="profile-picture"><img class="pofile-picture" src="/static/src/bird.jpg" alt="오목눈이">
+                        <div class="profile-picture"><img class="pofile-picture" src="/static/src/shin/bird.jpg" alt="오목눈이">
                         </div>
                     </div>
                     <!-- profile section 1  -->
@@ -58,22 +62,27 @@
                     <div class="hilight-box">
                         <ul class="hi-list">
                             <li class="hili">
-                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
                                     <span class="hititle">Now_Playing</span>
                                 </div>
                             </li>
                             <li class="hili">
-                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
                                     <span class="hititle">Now_Playing</span>
                                 </div>
                             </li>
                             <li class="hili">
-                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
                                     <span class="hititle">Now_Playing</span>
                                 </div>
                             </li>
                             <li class="hili">
-                                <div class="hipicdiv"><img class="hipic" src="/static/src/bird.jpg" alt="">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
+                                    <span class="hititle">Now_Playing</span>
+                                </div>
+                            </li>
+                            <li class="hili">
+                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
                                     <span class="hititle">Now_Playing</span>
                                 </div>
                             </li>
@@ -83,13 +92,13 @@
                 <!-- =========================hilight 끝======================== -->
                 <!-- =========================divBar-button 시작======================== -->
                 <div class="divBar-button">
-                    <a href="#" class="divbtn uploaded"><i class="divicon fa-solid fa-table-cells"><span
+                    <a href="#"  data-tab="tab1" class="tabbtn divbtn uploaded on"><i class="divicon fa-solid fa-table-cells"><span
                                 class="divtext">게시물</span></i>
                     </a>
-                    <a href="#" class="divbtn bookmark"><i class="divicon fa-solid fa-bookmark"><span
+                    <a href="#"  data-tab="tab2" class="tabbtn divbtn bookmark"><i class="divicon fa-solid fa-bookmark"><span
                                 class="divtext">저장됨</span></i>
                     </a>
-                    <a href="#" class="divbtn tagged"><i class="divicon fa-solid fa-image-portrait"><span
+                    <a href="#"  data-tab="tab3" class="tabbtn divbtn tagged"><i class="divicon fa-solid fa-image-portrait"><span
                                 class="divtext">태그됨</span></i>
                     </a>
                 </div>
@@ -97,16 +106,16 @@
                 <!-- =========================divBar-button 끝======================== -->
                 <!-- =========================contents 시작======================== -->
                 <!-- 콘텐츠 -->
-                <div class="contents">
-                    <%- include ("./contents")%>
+                <div id="tab1" class="tabbtn cnt on"> 
+                    <%- include("./contents") %>
                 </div>
                 <!-- 저장됨 -->
-                <div class="saved">
-                    <%- include ("./saved")%>
+                <div id="tab2" class="tabbtn cnt "> 
+                    <%- include("./saved") %>
                 </div>
                 <!-- 태그됨 -->
-                <div class="tagged">
-                    <%- include ("./tagged")%>
+                <div id="tab3" class="tabbtn cnt "> 
+                    √<%- include("./tagged") %>
                 </div>
                 <!-- =========================contents 끝======================== -->
             </div>
@@ -124,6 +133,7 @@
         </section>
         <!-- =============== section 끝 =============== -->
     </div>
+      
 </body>
 
 </html>

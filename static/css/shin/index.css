@@ -520,6 +520,24 @@ h5 {
 /*============ divBar-button end ==========*/
 
 
+
+/* =========== tab =========== */;
+.divBar-button{padding-top:20px; border-bottom:1px solid #777;}
+.divBar-button::after{content:''; display:block; clear:both;}
+.divBar-button .tabbtn{float: left;width: 150px;text-align: center;line-height: 32px; cursor:pointer}
+.divBar-button .tabbtn::after{content:''; display:none; clear:both; border-bottom:4px solid black; color:rgb(142,142,142);}
+.divBar-button .tabbtn.on::after{display:block;}
+
+.cnt{display:none; padding:0;}
+.cnt.on{display:block; padding:0;}
+/* .cnt h2{font-size:20px; font-weight:800;} */
+/* .cnt ul{padding:20px 0px;}
+.cnt ul li{line-height:22px;} */
+/* .cnt ul li::before{content: '';display: inline-block;margin-top: 9px;margin-right: 9px;width: 5px;height: 5px;background: #2f4394;border-radius: 50%;vertical-align: top;} */
+/* =========== tab =========== */;
+
+
+
 /*============ contents-box start ==============================*/
 .contents-box {
    display: flex;
