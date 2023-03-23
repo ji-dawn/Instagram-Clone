@@ -10,6 +10,9 @@ app.get("/", (req, res) => {
 });
 /* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
 // 포트 열기
+app.get("/main", (req, res) => {
+  res.render("main");
+});
 app.listen(PORT, () => {
   console.log(PORT + "is open!");
   console.log(`http://localhost:${PORT}`);

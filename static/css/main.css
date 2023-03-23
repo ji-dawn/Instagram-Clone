@@ -146,6 +146,7 @@
 
 .feed_comments .feed_likes .likes_user.profile .profile_img {
   width: 30px;
+  height: 30px;
   margin-right: 5px;
 }
 
@@ -214,11 +215,8 @@
 
 /* 오른쪽 영역 */
 .main .container .contents_right {
-  /* position: fixed;
-  left: calc(100% - 712px);  */
   width: 383px;
   box-sizing: border-box;
-
 }
 
 .contents_right .aside .aside_profile {
@@ -260,3 +258,49 @@
   color: #1c7ed6;
 }
 
+/* footer */
+   footer {
+      height: 50px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      padding-top: 0;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding-left: 16px;
+      padding-right: 16px;
+      margin: 0;
+      flex-shrink: 0;
+      align-items: stretch;
+      /* background-color: brown; */
+   }
+   .footer-div {
+      display: flex;
+      position: relative;
+      text-align: center;
+      align-content: center;
+      margin: 15px auto 0;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   
+   .footer-inner {
+      display: flex;
+      margin-right: 14px;
+      text-decoration: none;
+      align-items: center;
+      color: rgb(142, 142, 142);
+      font-size: 12px;
+   }
+
+/*media query*/
+   @media screen and (max-width:992px){
+    .contents_right{
+      display: none;
+     }
+
+    .contents_left{
+      display: flex;
+      justify-content: center;
+    }
+   }
