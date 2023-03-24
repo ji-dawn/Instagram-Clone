@@ -28,7 +28,23 @@
   </head>
   <body>
     <div class="home-logo">
-      <h1>Instagram</h1>
+      <a href="/views/Jin/content.ejs">
+        <i
+          data-visualcompletion="css-img"
+          aria-label="Instagram"
+          class=""
+          role="img"
+          style="
+            background-image: url('https://static.cdninstagram.com/rsrc.php/v3/yb/r/yBq7NPWKT2Z.png');
+            background-position: 0px -30px;
+            background-size: 104px 254px;
+            width: 103px;
+            height: 29px;
+            background-repeat: no-repeat;
+            display: inline-block;
+          "
+        ></i>
+      </a>
     </div>
     <div class="swiper-container">
       <div class="swiper">
@@ -37,11 +53,10 @@
           <div class="story-profile-id">user id</div>
           <button type="button" id="btn-play">
             <i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i>
-            <!-- <i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i> -->
           </button>
         </div>
         <div class="swiper-wrapper">
-          <% for (let i = 0; i < 4; i++) {%>
+          <% for (let i = 0; i < 18; i++) {%>
           <div class="swiper-slide">
             <img
               src="/static/src/images/story/story-<%=i %>.jpg"
@@ -49,15 +64,6 @@
             />
           </div>
           <% }%>
-          <!-- <div class="swiper-slide">
-            <img src="/static/src/images/story/jeep.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/static/src/images/story/mountain.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/static/src/images/story/street.jpg" alt="" />
-          </div> -->
         </div>
         <!-- pagination -->
         <div class="swiper-pagination"></div>
@@ -68,7 +74,9 @@
     </div>
 
     <div class="btn-close">
-      <i class="fa-solid fa-xmark fa-4x" style="color: #ffffff"></i>
+      <a href="/views/Jin/content.ejs"
+        ><i class="fa-solid fa-xmark fa-4x" style="color: #ffffff"></i
+      ></a>
     </div>
     <script src="/static/js/story.js"></script>
   </body>
