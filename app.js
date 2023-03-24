@@ -35,6 +35,9 @@ app.get('/common', (req, res) => {
 app.get('/main', (req, res) => {
   res.render('main');
 });
+app.get('/story', (req, res) => {
+  res.render('jihyo/story');
+});
 
 /* Bind and listen the connections on the specified host and port */
 app.listen(PORT, () => {
