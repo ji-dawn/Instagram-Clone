@@ -1,41 +1,109 @@
-<!-- contents-box : 컨텐츠 박스 시작 -->
-<div class="contents-box">
-   <!-- content-row1 : 게시물 위에서부터 1열 -->
-   <div class="content-row r1">
-      <!-- 콘텐츠로우 1열에 콘텐트 3개 -->
-      <!-- 콘텐츠는 일단 img로 채움 추후 링크로 변경예정 -->
-      <div class="content c1-1">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+<style>
+   .feed {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -5px;
+    }
+    
+    .feed .row {
+      display: flex;
+      margin: 2px;
+      width: calc(100% + 10px);
+      height: 100%;
+    }
+    
+    .feed .col {
+      flex-grow: 1;
+      width: 33%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 31%;
+    }
+    
+    .feed .col img {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       padding: 0 5px;
+       /* margin-right: 3px; */
+       object-fit: cover;
+     }
+    .feed .col img a {
+      display: block;
+      width: 100%;
+      height: 100%;
+   }
+</style> 
+   
+   
+   
+   <div class="feed">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-      <div class="content c1-2">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-      <div class="content c1-3">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-   </div>
-   <!-- content-row2 : 게시물 2열 -->
-   <div class="content-row r2">
-      <div class="content c2-1">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-      <div class="content c2-2">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-      <div class="content c2-3">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
+      <div class="row">
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#" alt=""><img src="/static/src/shin/fox.jpg" alt=""></a>
+        </div>
       </div>
-   </div>
-   <!-- content-row3 : 게시물 3열 -->
-   <div class="content-row r3">
-      <div class="content c3-1">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
-      </div>
-      <div class="content c3-2">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
-      </div>
-      <div class="content c3-3">
-         <img class="content-img" src="/static/src/bird.jpg" alt="">
-      </div>
-   </div>
-</div>
+    </div>
