@@ -30,7 +30,6 @@ app.get("/saved", (req, res) => {
   res.render("shin/saved");
 });
 app.get("/common", (req, res) => {
-<<<<<<< HEAD
   res.render("shin/common")
 })
 app.get("/clickp", (req, res) => {
@@ -42,13 +41,9 @@ app.get("/follow", (req, res) => {
 app.get("/follower", (req, res) => {
   res.render("shin/follower")
 })
-=======
-  res.render("shin/common");
-});
 app.get("/main", (req, res) => {
   res.render("main");
 });
->>>>>>> main
 
 for (let i = 0; i < 8; ++i) {
   app.get(`/story/:${i}`, (req, res, next) => {
