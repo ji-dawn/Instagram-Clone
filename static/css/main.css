@@ -98,7 +98,7 @@
 }
 
 .feed_profile .profile p {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .feed_profile .profile .profile_id {
@@ -148,6 +148,17 @@
   width: 30px;
   height: 30px;
   margin-right: 5px;
+}
+
+.user_id_img{
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.user_id_nick{
+  font-weight: bold;
 }
 
 .feed_comments .comment_list .comments_info li {
@@ -301,6 +312,11 @@
 
     .contents_left{
       display: flex;
-      justify-content: center;
+      margin: auto;
+    }
+
+    .contents_left .img {
+      display: flex;
+      margin: auto;
     }
    }
