@@ -1,10 +1,13 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="../../static/css/Jin/global.css" />
-<!-- content-->
+<!-- Content-->
 <link rel="stylesheet" href="../../static/css/Jin/content.css" />
 
+<!-- Top bar list-->
+<script defer src="../../static/js/Jin/content_top_bar.js"></script>
+
+<!-- Shuffle images every page refresh -->
 <script>
-  /* Shuffle images every refresh */
   const randomId = []; /* Index from 0 to 99*/
   for (let i = 0; i < 100; ++i) {
     randomId.push(i);
@@ -23,9 +26,9 @@
     <!-- Top bar-->
     <section class="top-bar">
       <li class="top-bar-list">
-        <% for (let i = 1; i <= 8; ++i) { %>
+        <% for (let i = 0; i < 8; ++i) { %>
         <div class="top-reels<%=i %>">
-          <button>
+          <button class="top-reels-btn<%=i %>">
             <div>
               <img
                 src="../../static/src/Jin/top-bar/reels-<%=i %>.jpeg"
