@@ -9,7 +9,7 @@
 <!-- Shuffle images every page refresh -->
 <script>
   const randomId = []; /* Index from 0 to 99*/
-  for (let i = 0; i < 100; ++i) {
+  for (let i = 0; i < 10; ++i) {
     randomId.push(i);
   }
 
@@ -51,7 +51,7 @@
       <div class="post-main">
         <li class="post-main-list">
           <!-- Post body -->
-          <% for (let i = 1; i < 5; ++i) {%>
+          <% for (let i = 0; i < 8; ++i) {%>
           <section class="post-body<%=i %>">
             <!-- Post header -->
             <div class="post-header">
@@ -91,10 +91,16 @@
 
             <!-- Post image -->
             <button class="post-image">
+              <!-- <script>
+                let idx = randomId[<%= i%>];
+              </script> -->
               <img
                 src="../../static/src/Jin/post/posts-<%=i %>.jpg"
                 alt="post-image-<%=i %>"
               />
+              <!-- <script>
+                console.log(randomId[<%= i %>]);
+              </script> -->
             </button>
 
             <!-- Post main -->
