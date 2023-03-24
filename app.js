@@ -37,6 +37,14 @@ app.get("/main", (req, res) => {
 });
 
 /* Bind and listen the connections on the specified host and port */
+<<<<<<< HEAD
+=======
+/* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
+// 포트 열기
+app.get("/main", (req, res) => {
+  res.render("main");
+});
+>>>>>>> 177804772262b42b79f8fca7bdf76d95d1a1ab27
 app.listen(PORT, () => {
   console.log(`localhost:${PORT} is open!`);
 });
