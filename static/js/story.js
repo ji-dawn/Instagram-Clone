@@ -3,6 +3,7 @@ const swiper = new Swiper('.swiper', {
   loop: false,
   slidesPerView: 1,
   mousewheel: false,
+  autoplayStopOnLast: true,
   autoplay: {
     delay: 3000,
   },
@@ -59,6 +60,13 @@ $('.swiper-button-next').click(() => {
     swiper.autoplay.resume();
     onPlaySetAttr();
   }
+});
+swiper.on('reachEnd', () => {
+  swiper.autoplay.stop();
+  $('.swiper-button-prev').click(() => {
+    // TODO :
+    swiper.autoplay.start();
+  });
 });
 
 function onPlaySetAttr() {
