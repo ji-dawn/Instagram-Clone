@@ -107,14 +107,23 @@ section {
    /* background-color: skyblue; */
 }
 
+.profile-pict{
+   border-radius : 50%;
+   padding:0;
+   display:flex;
+   position:relative;
+   width:150px;
+   height:100%;
+}
 
 .pofile-picture {
-   display: block;
+   display: flex;
    position: relative;
    box-sizing: border-box;
    border-radius: 50%;
    width: 100%;
-   height: 100%;
+   object-fit:cover;
+   overflow: hidden;
 }
 
 .profile-section {
@@ -212,6 +221,14 @@ h2 {
    font-size: 100%;
 }
 
+.editbtn{
+   margin-left:30px;
+   font-size:20px;
+   border : none !important;
+   border-radius : 10px !important; 
+   /* background-color: gray; */
+}
+
 .ps-row2 {
    display: flex;
    position: relative;
@@ -262,16 +279,17 @@ h2 {
 .user-name2 {
    display: inline;
    margin: 0;
-   font-size: 14px;
-   font-weight: 600;
+   font-size: 15px;
+   font-weight: 700;
 }
 
-h5 {
+.profile-ment {
    display: block;
    color: rgb(38, 38, 38);
    font-weight: 400;
    margin: 0;
    line-height: 20px;
+   font-size:14px;
 }
 
 @media (max-width:735px) {
@@ -296,6 +314,10 @@ h5 {
 }
 
 /*============ header end ==========*/
+
+
+/*============ pic modal start ==========*/
+/*============ pic modal end ==========*/
 
 
 /*============ hilight start ==========*/
@@ -410,6 +432,10 @@ h5 {
    justify-content: center;
 }
 
+.fbtn{
+   border:0;
+   background-color:#fff;
+}
 
 /*============ hilight end ==========*/
 
@@ -518,6 +544,24 @@ h5 {
 }
 
 /*============ divBar-button end ==========*/
+
+
+
+/* =========== tab =========== */;
+.divBar-button{padding-top:20px; border-bottom:1px solid #777;}
+.divBar-button::after{content:''; display:block; clear:both;}
+.divBar-button .tabbtn{float: left;width: 150px;text-align: center;line-height: 32px; cursor:pointer}
+.divBar-button .tabbtn::after{content:''; display:none; clear:both; border-bottom:4px solid black; color:rgb(142,142,142);}
+.divBar-button .tabbtn.on::after{display:block;}
+
+.cnt{display:none; padding:0;}
+.cnt.on{display:block; padding:0;}
+/* .cnt h2{font-size:20px; font-weight:800;} */
+/* .cnt ul{padding:20px 0px;}
+.cnt ul li{line-height:22px;} */
+/* .cnt ul li::before{content: '';display: inline-block;margin-top: 9px;margin-right: 9px;width: 5px;height: 5px;background: #2f4394;border-radius: 50%;vertical-align: top;} */
+/* =========== tab =========== */;
+
 
 
 /*============ contents-box start ==============================*/
