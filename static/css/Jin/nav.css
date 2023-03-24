@@ -210,8 +210,11 @@
     top: 0;
     z-index: 100;
 
+    border-bottom: 1px solid var(--nav-bar-border-color);
+
     background-color: forestgreen;
   }
+  /* Show .content right below .nav-small-top */
   .content {
     transform: translateY(60px);
   }
