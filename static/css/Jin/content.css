@@ -33,10 +33,36 @@
   flex-direction: row;
 }
 
-.top-bar-list div button div img {
+.top-reels-profile,
+.top-reels-profile-shadow,
+.top-reels-profile-img {
+  border-radius: 50%;
+}
+
+.top-reels-profile,
+.top-reels-profile-shadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-reels-profile {
+  background: linear-gradient(45deg, #ffe600 10%, #ff0080, #db20db);
+
+  width: 66px;
+  height: 66px;
+}
+
+.top-reels-profile-shadow {
+  width: 61px;
+  height: 61px;
+
+  background-color: white;
+}
+
+.top-reels-profile-img {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
 
   margin: 5px;
 }
