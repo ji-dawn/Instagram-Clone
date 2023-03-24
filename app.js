@@ -32,6 +32,15 @@ app.get("/saved", (req, res) => {
 app.get("/common", (req, res) => {
   res.render("shin/common")
 })
+app.get("/clickp", (req, res) => {
+  res.render("shin/click-profile")
+})
+app.get("/follow", (req, res) => {
+  res.render("shin/follow")
+})
+app.get("/follower", (req, res) => {
+  res.render("shin/follower")
+})
 
 
 /* Bind and listen the connections on the specified host and port */
