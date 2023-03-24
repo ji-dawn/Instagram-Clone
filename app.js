@@ -18,18 +18,19 @@ app.get("/", (req, res) => {
 
 /* Binding */
 app.get("/contents", (req, res) => {
-  res.render("shin/contents")
-})
+  res.render("shin/contents");
+});
 app.get("/header", (req, res) => {
-  res.render("shin/header")
-})
+  res.render("shin/header");
+});
 app.get("/tagged", (req, res) => {
-  res.render("shin/tagged")
-})
+  res.render("shin/tagged");
+});
 app.get("/saved", (req, res) => {
-  res.render("shin/saved")
-})
+  res.render("shin/saved");
+});
 app.get("/common", (req, res) => {
+<<<<<<< HEAD
   res.render("shin/common")
 })
 app.get("/clickp", (req, res) => {
@@ -41,12 +42,22 @@ app.get("/follow", (req, res) => {
 app.get("/follower", (req, res) => {
   res.render("shin/follower")
 })
+=======
+  res.render("shin/common");
+});
+app.get("/main", (req, res) => {
+  res.render("main");
+});
+>>>>>>> main
 
+for (let i = 0; i < 8; ++i) {
+  app.get(`/story/:${i}`, (req, res, next) => {
+    console.log(req.params);
+    res.render("jihyo/story", { imageNum: req.params });
+  });
+}
 
 /* Bind and listen the connections on the specified host and port */
-/* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
-// 포트 열기
 app.listen(PORT, () => {
-  console.log(`${PORT} 'is open!`);
-  console.log(`http://localhost:${PORT}`);
+  console.log(`localhost:${PORT} is open!`);
 });

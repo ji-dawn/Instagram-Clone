@@ -37,6 +37,7 @@ h1 {
 .swiper-slide {
   text-align: center;
   background-color: lightcoral;
+  background-position: center;
 }
 .swiper-button-prev,
 .swiper-button-next {

@@ -3,6 +3,7 @@ const swiper = new Swiper('.swiper', {
   loop: false,
   slidesPerView: 1,
   mousewheel: false,
+  autoplayStopOnLast: true,
   autoplay: {
     delay: 3000,
   },
@@ -32,24 +33,55 @@ const swiper = new Swiper('.swiper', {
 let onPlay = true;
 $('#btn-play').click(() => {
   if (onPlay) {
-    swiper.autoplay.stop();
-    $('.swiper-pagination-bullet-active b').css(
-      'animation-play-state',
-      'paused'
-    );
-    $('#btn-play').html(
-      '<button type="button" id="btn-play"><i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i></button>'
-    );
+    swiper.autoplay.pause();
+    onPlaySetAttr();
     onPlay = false;
   } else {
-    swiper.autoplay.start();
-    $('.swiper-pagination-bullet-active b').css(
-      'animation-play-state',
-      'running'
-    );
-    $('#btn-play').html(
-      '<button type="button" id="btn-play"><i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i></button>'
-    );
+    swiper.autoplay.resume();
+    onPausedSetAttr();
     onPlay = true;
   }
 });
+
+$('.swiper-button-prev').click(() => {
+  if (onPlay) {
+    swiper.autoplay.pause();
+    onPausedSetAttr();
+  } else {
+    swiper.autoplay.resume();
+    onPlaySetAttr();
+  }
+});
+$('.swiper-button-next').click(() => {
+  if (onPlay) {
+    swiper.autoplay.pause();
+    onPausedSetAttr();
+  } else {
+    swiper.autoplay.resume();
+    onPlaySetAttr();
+  }
+});
+swiper.on('reachEnd', () => {
+  swiper.autoplay.stop();
+  $('.swiper-button-prev').click(() => {
+    // TODO :
+    swiper.autoplay.start();
+  });
+});
+
+function onPlaySetAttr() {
+  $('.swiper-pagination-bullet-active b').css('animation-play-state', 'paused');
+  $('#btn-play').html(
+    '<button type="button" id="btn-play"><i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i></button>'
+  );
+}
+
+function onPausedSetAttr() {
+  $('.swiper-pagination-bullet-active b').css(
+    'animation-play-state',
+    'running'
+  );
+  $('#btn-play').html(
+    '<button type="button" id="btn-play"><i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i></button>'
+  );
+}
