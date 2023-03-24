@@ -6,8 +6,7 @@ body {
   margin: 0px;
 }
 .home-logo {
-  width: 100px;
-  height: fit-content;
+  width: 196px;
   margin-top: 16px;
   margin-left: 16px;
 }
@@ -16,6 +15,11 @@ body {
   cursor: pointer;
   margin-top: 16px;
   margin-right: 16px;
+  cursor: pointer;
+}
+.top-close-button {
+  border: none;
+  background-color: transparent;
 }
 .swiper-container {
   position: relative;

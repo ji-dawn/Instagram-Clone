@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   // loop가 false일 경우 start, end 도달 시 button 비활성화 자동
   loop: false,
   slidesPerView: 1,
@@ -11,32 +11,32 @@ const swiper = new Swiper('.swiper', {
   speed: 100,
   // 화살표 동작
   navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next',
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
   },
-  effect: 'fade',
+  effect: "fade",
   fadeEffect: {
     crossFade: true,
   },
   // page 표시 (bullet으로 표시)
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: false,
     renderBullet: function (index, className) {
       return (
-        '<span class="' + className + '">' + '<i></i>' + '<b></b>' + '</span>'
+        '<span class="' + className + '">' + "<i></i>" + "<b></b>" + "</span>"
       );
     },
   },
 });
 
-$('.top-close-button').click(() => {
-  window.history.back();
+$(".top-close-button").click(() => {
+  window.location.replace("/");
 });
 
 let onPlay = true;
 // play/pause button event
-$('#btn-play').click(() => {
+$("#btn-play").click(() => {
   if (onPlay) {
     swiper.autoplay.pause();
     onPlaySetAttr();
@@ -49,7 +49,7 @@ $('#btn-play').click(() => {
 });
 
 // swiper-navigation-button event
-$('.swiper-button-prev').click(() => {
+$(".swiper-button-prev").click(() => {
   if (onPlay) {
     swiper.autoplay.pause();
     onPausedSetAttr();
@@ -58,7 +58,7 @@ $('.swiper-button-prev').click(() => {
     onPlaySetAttr();
   }
 });
-$('.swiper-button-next').click(() => {
+$(".swiper-button-next").click(() => {
   if (onPlay) {
     swiper.autoplay.pause();
     onPausedSetAttr();
@@ -67,26 +67,26 @@ $('.swiper-button-next').click(() => {
     onPlaySetAttr();
   }
 });
-swiper.on('reachEnd', () => {
+swiper.on("reachEnd", () => {
   swiper.autoplay.stop();
-  $('.swiper-button-prev').click(() => {
+  $(".swiper-button-prev").click(() => {
     swiper.autoplay.start();
   });
 });
 
 function onPlaySetAttr() {
-  $('.swiper-pagination-bullet-active b').css('animation-play-state', 'paused');
-  $('#btn-play').html(
+  $(".swiper-pagination-bullet-active b").css("animation-play-state", "paused");
+  $("#btn-play").html(
     '<button type="button" id="btn-play"><i class="fa-solid fa-play fa-2x" style="color: #ffffff"></i></button>'
   );
 }
 
 function onPausedSetAttr() {
-  $('.swiper-pagination-bullet-active b').css(
-    'animation-play-state',
-    'running'
+  $(".swiper-pagination-bullet-active b").css(
+    "animation-play-state",
+    "running"
   );
-  $('#btn-play').html(
+  $("#btn-play").html(
     '<button type="button" id="btn-play"><i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i></button>'
   );
 }
