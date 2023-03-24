@@ -17,29 +17,32 @@ app.get('/', (req, res) => {
 });
 
 /* Binding */
-app.get('/contents', (req, res) => {
-  res.render('shin/contents');
+app.get("/contents", (req, res) => {
+  res.render("shin/contents");
 });
-app.get('/header', (req, res) => {
-  res.render('shin/header');
+app.get("/header", (req, res) => {
+  res.render("shin/header");
 });
-app.get('/tagged', (req, res) => {
-  res.render('shin/tagged');
+app.get("/tagged", (req, res) => {
+  res.render("shin/tagged");
 });
-app.get('/saved', (req, res) => {
-  res.render('shin/saved');
+app.get("/saved", (req, res) => {
+  res.render("shin/saved");
 });
-app.get('/common', (req, res) => {
-  res.render('shin/common');
+app.get("/common", (req, res) => {
+  res.render("shin/common");
 });
-app.get('/clickp', (req, res) => {
-  res.render('shin/click-profile');
+app.get("/clickp", (req, res) => {
+  res.render("shin/click-profile");
 });
-app.get('/follow', (req, res) => {
-  res.render('shin/follow');
+app.get("/follow", (req, res) => {
+  res.render("shin/follow");
 });
-app.get('/follower', (req, res) => {
-  res.render('shin/follower');
+app.get("/follower", (req, res) => {
+  res.render("shin/follower");
+});
+app.get("/main", (req, res) => {
+  res.render("main");
 });
 
 for (let i = 0; i < 8; ++i) {

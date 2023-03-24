@@ -29,11 +29,14 @@
         <% for (let i = 0; i < 8; ++i) { %>
         <div class="top-reels<%=i %>">
           <button class="top-reels-btn<%=i %>">
-            <div>
-              <img
-                src="../../static/src/Jin/top-bar/reels-<%=i %>.jpeg"
-                alt="top-reels-<%=i %>"
-              />
+            <div class="top-reels-profile">
+              <div class="top-reels-profile-shadow">
+                <img
+                  class="top-reels-profile-img"
+                  src="../../static/src/Jin/top-bar/reels-<%=i %>.jpeg"
+                  alt="top-reels-<%=i %>"
+                />
+              </div>
             </div>
             <div>
               <span>Id <%=i %></span>
