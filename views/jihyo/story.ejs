@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram Story 1</title>
+    <title>Document</title>
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -41,29 +41,26 @@
           </button>
         </div>
         <div class="swiper-wrapper">
+          <% for (let i = 0; i < 4; i++) {%>
           <div class="swiper-slide">
-            <img src="/static/src/images/story/story-0.jpg" alt="" />
+            <img
+              src="/static/src/images/story/story-<%=i %>.jpg"
+              alt="story-image-<%=i %>"
+            />
+          </div>
+          <% }%>
+          <!-- <div class="swiper-slide">
+            <img src="/static/src/images/story/jeep.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="/static/src/images/story/story-1.jpg" alt="" />
+            <img src="/static/src/images/story/mountain.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="/static/src/images/story/story-2.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/static/src/images/story/story-3.jpg" alt="" />
-          </div>
+            <img src="/static/src/images/story/street.jpg" alt="" />
+          </div> -->
         </div>
         <!-- pagination -->
         <div class="swiper-pagination"></div>
-        <!-- comment form -->
-        <div class="story-footer">
-          <form action="">
-            <input type="text" />
-          </form>
-          <i class="fa-regular fa-heart"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
       </div>
       <!-- slide button -->
       <div class="swiper-button-prev"></div>
