@@ -1,59 +1,51 @@
 /* Using Express */
-const express = require("express");
+const express = require('express');
 const app = express();
 
 /* Settings for port number */
 const PORT = 8000;
 
 /* Settings for port number */
-app.set("view engine", "ejs");
-app.set("/views", "views");
+app.set('view engine', 'ejs');
+app.set('/views', 'views');
 /* Settings for static directory */
-app.use("/static", express.static(__dirname + "/static"));
+app.use('/static', express.static(__dirname + '/static'));
 
 /* Routing */
-app.get("/", (req, res) => {
-  res.render("index"); /* Start path from /views/ */
+app.get('/', (req, res) => {
+  res.render('index'); /* Start path from /views/ */
 });
 
 /* Binding */
-app.get("/contents", (req, res) => {
-  res.render("shin/contents");
+app.get('/contents', (req, res) => {
+  res.render('shin/contents');
 });
-app.get("/header", (req, res) => {
-  res.render("shin/header");
+app.get('/header', (req, res) => {
+  res.render('shin/header');
 });
-app.get("/tagged", (req, res) => {
-  res.render("shin/tagged");
+app.get('/tagged', (req, res) => {
+  res.render('shin/tagged');
 });
-app.get("/saved", (req, res) => {
-  res.render("shin/saved");
+app.get('/saved', (req, res) => {
+  res.render('shin/saved');
 });
-app.get("/common", (req, res) => {
-<<<<<<< HEAD
-  res.render("shin/common")
-})
-app.get("/clickp", (req, res) => {
-  res.render("shin/click-profile")
-})
-app.get("/follow", (req, res) => {
-  res.render("shin/follow")
-})
-app.get("/follower", (req, res) => {
-  res.render("shin/follower")
-})
-=======
-  res.render("shin/common");
+app.get('/common', (req, res) => {
+  res.render('shin/common');
 });
-app.get("/main", (req, res) => {
-  res.render("main");
+app.get('/clickp', (req, res) => {
+  res.render('shin/click-profile');
 });
->>>>>>> main
+app.get('/follow', (req, res) => {
+  res.render('shin/follow');
+});
+app.get('/follower', (req, res) => {
+  res.render('shin/follower');
+});
 
 for (let i = 0; i < 8; ++i) {
   app.get(`/story/:${i}`, (req, res, next) => {
     console.log(req.params);
-    res.render("jihyo/story", { imageNum: req.params });
+    res.render('jihyo/story', { imageNum: req.params });
   });
 }
 
