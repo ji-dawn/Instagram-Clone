@@ -30,10 +30,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-$(".top-close-button").click(() => {
-  window.location.replace("/");
-});
-
 let onPlay = true;
 // play/pause button event
 $("#btn-play").click(() => {

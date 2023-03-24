@@ -17,10 +17,6 @@ body {
   margin-right: 16px;
   cursor: pointer;
 }
-.top-close-button {
-  border: none;
-  background-color: transparent;
-}
 .swiper-container {
   position: relative;
   margin-top: 16px;

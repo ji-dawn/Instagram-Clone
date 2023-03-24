@@ -57,10 +57,10 @@
           </button>
         </div>
         <div class="swiper-wrapper">
-          <% for (let i = 0; i < 20; i++) {%>
+          <% for (let i = 0; i < 4; i++) {%>
           <div class="swiper-slide">
             <img
-              src="/static/src/images/story/story-<%=i %>.jpg"
+              src="/static/src/images/story/story-<%=imageNum %>.jpg"
               alt="story-image-<%=i %>"
             />
           </div>
@@ -75,9 +75,9 @@
     </div>
 
     <div class="top-close">
-      <button class="top-close-button">
-        <i class="fa-solid fa-xmark fa-4x" style="color: #ffffff"></i>
-      </button>
+      <a href="/"
+        ><i class="fa-solid fa-xmark fa-4x" style="color: #ffffff"></i
+      ></a>
     </div>
     <script src="/static/js/story.js"></script>
   </body>
