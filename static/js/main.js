@@ -17,9 +17,11 @@ function commentUpdate() {
   pBox.setAttribute("class", "comments_tit");
   deleteIcon.setAttribute("class", "fa-regular fa-trash-can");
   heartIcon.setAttribute('class','fa-regular fa-heart');
+  
 
   userBox.innerHTML = user;
   commentCtnBox.innerHTML = comments.value;
+  
 
   pBox.appendChild(userBox);
   pBox.appendChild(commentCtnBox);
@@ -50,15 +52,25 @@ heartIcon.addEventListener("click",function(){
 
 let heart = document.querySelector(".fa-regular");
 let likenumber = document.querySelector(".likes_number");
+let user_id_img = document.querySelector('.user_id_img');
+let user_id_nick = document.querySelector('.user_id_nick');
+let profile_id = document.querySelector('.profile_id');
+let user1 = '__SSANG';
+let user2 = 'minchodan_31'
 heart.addEventListener("click", function () {
   if ($(heart).hasClass("fa-regular")) {
     heart.classList = "fa-solid fa-heart";
     heart.setAttribute("css", "color:red");
     heart.style.color = "red";
+    user_id_img.setAttribute('src','../static/src/pexels-alexandra-folster-6307706.jpg');
+    user_id_nick.innerText = user1;
     likenumber.innerText = parseInt(likenumber.innerText) + 1;
   } else {
     heart.classList = "fa-regular fa-heart";
     heart.style.color = "black";
+    user_id_img.setAttribute('src','../static/src/mintchoco.jpeg');
+    user_id_nick.innerText = user2;
+    // user1 = user_id_nick.innerText;
     likenumber.innerText = parseInt(likenumber.innerText) - 1;
   }
 });
