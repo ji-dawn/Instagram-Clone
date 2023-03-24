@@ -32,15 +32,20 @@ app.get('/saved', (req, res) => {
 app.get('/common', (req, res) => {
   res.render('shin/common');
 });
-app.get('/main', (req, res) => {
-  res.render('main');
+app.get('/story', (req, res) => {
+  res.render('jihyo/story');
 });
+for (let i = 0; i < 5; ++i) {
+  app.get(`/main${i}`, (req, res) => {
+    res.render('main');
+  });
+}
 
 /* Bind and listen the connections on the specified host and port */
 /* 나중에 라우팅될 코드 get 요청 이용해서 작성 */
 // 포트 열기
-app.get("/main", (req, res) => {
-  res.render("main");
+app.get('/main', (req, res) => {
+  res.render('main');
 });
 app.listen(PORT, () => {
   console.log(`${PORT} 'is open!`);

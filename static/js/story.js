@@ -30,7 +30,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 let onPlay = true;
-let isPaused = swiper.autoplay.paused;
 $('#btn-play').click(() => {
   if (onPlay) {
     swiper.autoplay.pause();
@@ -44,22 +43,21 @@ $('#btn-play').click(() => {
 });
 
 $('.swiper-button-prev').click(() => {
-  if (!isPaused) {
+  if (onPlay) {
     swiper.autoplay.pause();
-    onPlaySetAttr();
+    onPausedSetAttr();
   } else {
     swiper.autoplay.resume();
-    onPausedSetAttr();
+    onPlaySetAttr();
   }
 });
-
 $('.swiper-button-next').click(() => {
-  if (!isPaused) {
+  if (onPlay) {
     swiper.autoplay.pause();
-    onPlaySetAttr();
+    onPausedSetAttr();
   } else {
     swiper.autoplay.resume();
-    onPausedSetAttr();
+    onPlaySetAttr();
   }
 });
 
