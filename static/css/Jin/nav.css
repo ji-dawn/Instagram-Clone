@@ -35,18 +35,6 @@
   background-color: pink;
 }
 
-/* nav bar mid */
-/* .nav-bar-mid > div {
-  margin: 8px 0px;
-  padding: 12px;
-
-  display: flex;
-  flex-direction: row;
-
-  background-color: yellow;
-} */
-
-/* Debug */
 .nav-bar-mid > a > div {
   margin: 8px 0px;
   padding: 12px;
@@ -56,8 +44,6 @@
 
   background-color: yellow;
 }
-
-/* Debug */
 
 .nav-mid-text {
   padding: 0 0 0 16px;
@@ -170,14 +156,9 @@
     width: 100vw;
   }
 
-  /* .nav-bar-mid > div {
-    margin: 0;
-  } */
-  /* Debug */
   .nav-bar-mid > a > div {
     margin: 0;
   }
-  /* Debug */
 
   /* Hide */
   .nav-large,
