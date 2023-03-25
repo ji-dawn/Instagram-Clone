@@ -11,22 +11,9 @@ app.set("/views", "views");
 /* Settings for static directory */
 app.use("/static", express.static(__dirname + "/static"));
 
-/* Shuffle images every page refresh */
-
-const randomId = []; /* Index from 0 to 99*/
-for (let i = 0; i < 8; ++i) {
-  randomId.push(i);
-}
-
-function shuffle(array) {
-  /* Get numbers in -0.5 ~ 0.5 range becomes index of sort() */
-  array.sort(() => Math.random() - 0.5);
-}
-shuffle(randomId);
-
 /* Routing */
 app.get("/", (req, res) => {
-  res.render("index", { randomId: randomId }); /* Start path from /views/ */
+  res.render("index"); /* Start path from /views/ */
 });
 
 /* Binding */

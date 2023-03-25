@@ -78,7 +78,8 @@
             <!-- Post image -->
             <button class="post-image">
               <img
-                src="../../static/src/Jin/post/posts-<%=randomId[i] %>.jpg"
+                id="random-post-image-<%=i %>"
+                src=""
                 alt="post-image-<%=i %>"
               />
             </button>
@@ -236,3 +237,6 @@
     </div>
   </div>
 </div>
+
+<!-- Shuffle images every page refresh -->
+<script src="../../static/js/Jin/shuffle_images.js"></script>
