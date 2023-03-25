@@ -62,13 +62,13 @@ heart.addEventListener("click", function () {
     heart.classList = "fa-solid fa-heart";
     heart.setAttribute("css", "color:red");
     heart.style.color = "red";
-    user_id_img.setAttribute('src','../static/src/pexels-alexandra-folster-6307706.jpg');
+    user_id_img.setAttribute('src','../static/src/sang/pexels-alexandra-folster-6307706.jpg');
     user_id_nick.innerText = user1;
     likenumber.innerText = parseInt(likenumber.innerText) + 1;
   } else {
     heart.classList = "fa-regular fa-heart";
     heart.style.color = "black";
-    user_id_img.setAttribute('src','../static/src/mintchoco.jpeg');
+    user_id_img.setAttribute('src','../static/src/sang/mintchoco.jpeg');
     user_id_nick.innerText = user2;
     // user1 = user_id_nick.innerText;
     likenumber.innerText = parseInt(likenumber.innerText) - 1;
