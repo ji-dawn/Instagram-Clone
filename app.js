@@ -30,24 +30,27 @@ app.get("/saved", (req, res) => {
   res.render("shin/saved");
 });
 app.get("/common", (req, res) => {
+
   res.render("shin/common")
 })
+
 app.get("/clickp", (req, res) => {
-  res.render("shin/click-profile")
-})
+  res.render("shin/click-profile");
+});
 app.get("/follow", (req, res) => {
-  res.render("shin/follow")
-})
+  res.render("shin/follow");
+});
 app.get("/follower", (req, res) => {
+
   res.render("shin/follower")
 })
+
 app.get("/main", (req, res) => {
   res.render("main");
 });
 
 for (let i = 0; i < 8; ++i) {
   app.get(`/story/:${i}`, (req, res, next) => {
-    console.log(req.params);
     res.render("jihyo/story", { imageNum: req.params });
   });
 }

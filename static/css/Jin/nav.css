@@ -20,8 +20,6 @@
 }
 .instagram-icon-large {
   padding: 12px 0 7px 12px;
-
-  background-color: pink;
 }
 
 .instagram-icon-container-mid {
@@ -31,8 +29,6 @@
 }
 .instagram-icon-mid {
   padding: 12px;
-
-  background-color: pink;
 }
 
 .nav-bar-mid > a > div {
@@ -41,8 +37,6 @@
 
   display: flex;
   flex-direction: row;
-
-  background-color: yellow;
 }
 
 .nav-mid-text {
@@ -62,8 +56,6 @@
 /* nav bar end */
 .nav-bar-end {
   margin-top: auto; /* Locate .nav-bar-end at the end of the column*/
-
-  background-color: green;
 }
 
 .nav-bar-end div {
@@ -91,8 +83,6 @@
     z-index: 100;
 
     border-right: 1px solid var(--nav-bar-border-color);
-
-    background-color: rgba(255, 0, 0, 0.507);
   }
 }
 
@@ -116,8 +106,6 @@
     z-index: 100;
 
     border-right: 1px solid var(--nav-bar-border-color);
-
-    background-color: rgba(128, 0, 128, 0.576);
   }
 }
 
@@ -127,8 +115,6 @@
   main {
     display: flex;
     flex-direction: column;
-
-    background-color: red;
   }
 
   .nav {
@@ -139,8 +125,6 @@
     bottom: 0;
 
     border-top: 1px solid var(--nav-bar-border-color);
-
-    background-color: rgb(0, 128, 0);
   }
 
   .nav-bar {
@@ -154,6 +138,8 @@
     justify-content: space-evenly;
 
     width: 100vw;
+
+    background-color: white;
   }
 
   .nav-bar-mid > a > div {
@@ -211,11 +197,11 @@
 
     border-bottom: 1px solid var(--nav-bar-border-color);
 
-    background-color: forestgreen;
+    background-color: white;
   }
   /* Show .content right below .nav-small-top */
   .content {
-    transform: translateY(60px);
+    transform: translateY(55px);
   }
 
   .nav-small-top-bar {
