@@ -1,12 +1,12 @@
 {
   "name": "instagram_clone",
   "version": "1.0.0",
-  "description": "",
+  "description": "인스타그램 클론 프로젝트로 총 4개의 화면(홈, 스토리, 프로필, 댓글 작성)을 구현",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "코딩온 KDT 6기 4조",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.0-alpha1",
