@@ -6,16 +6,16 @@ body {
   margin: 0px;
 }
 .home-logo {
-  width: 100px;
-  height: fit-content;
+  width: 196px;
   margin-top: 16px;
   margin-left: 16px;
 }
-.btn-close {
+.top-close {
   height: fit-content;
   cursor: pointer;
   margin-top: 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 .swiper-container {
   position: relative;
