@@ -30,7 +30,6 @@ app.get("/saved", (req, res) => {
   res.render("shin/saved");
 });
 app.get("/common", (req, res) => {
-
   res.render("shin/common")
 })
 
@@ -41,7 +40,6 @@ app.get("/follow", (req, res) => {
   res.render("shin/follow");
 });
 app.get("/follower", (req, res) => {
-
   res.render("shin/follower")
 })
 
