@@ -52,6 +52,12 @@ for (let i = 0; i < 8; ++i) {
   });
 }
 
+for (let i = 0; i < 10; ++i) {
+  app.get(`/main${i}`, (req, res) => {
+    res.render("main", { imgNum: `${i}` });
+  });
+}
+
 /* Bind and listen the connections on the specified host and port */
 app.listen(PORT, () => {
   console.log(`localhost:${PORT} is open!`);

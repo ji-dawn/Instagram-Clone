@@ -1,8 +1,8 @@
 body {
    margin: 0;
    padding: 0;
-   /* background-color: palevioletred; */
    background-color: rgb(255, 255, 255);
+   display:flex;
 }
 
 * {
@@ -12,20 +12,22 @@ body {
 section {
    padding: 0;
    margin: 0;
-   overflow-x: hidden;
    display: flex;
-   flex-direction: column;
+   /* flex-direction: column; */
+   flex-direction: row;
+   position:relative;
+   /* justify-content:space-between !important; */
 }
 
 
 /*=============== 반응형 ===================================================*/
 /* 735 이상부터  */
 @media (min-width: 736px) {
-   .container {
+   /* .container {
       padding: 60px 20px 0;
       box-sizing: border-box;
       width: calc(100% - 40px);
-   }
+   } */
 
    .hilight-shell {
       height: 130px;
@@ -40,22 +42,27 @@ section {
    }
 }
 
-
+/* 
 
 @media (min-width: 768px) and (max-width: 1263px) {
    .container {
       width: calc(100% - 72px);
    }
+}*/
+
+
+
+/* Debug */
+
+.profile_main { 
+   display: relative !important;
 }
-
-
-
-
 
 
 /*============ shell start ==========*/
 .profile_main {
    display: flex;
+   flex-direction:row;
    width: 100%;
    /* height: 100vh; */
    /* height: 100%; */
@@ -68,17 +75,28 @@ section {
    background-color: rgb(255, 255, 255);
 }
 
-.container {
+@media (max-width: 767px){
+   .container2{
+      padding-top:90px !important;
+      /* max-width:500px !important; */
+   }}
+
+.container2 {
+   /* background: blue; */
    /* display: flex; */
-   flex-grow: 1;
-   margin: 0 auto;
-   width: 100%;
-   /* position: relative; */
-   max-width: 935px;
+   /* flex-grow: 1; */
+   /* margin: 0 auto; */
+   padding-left:20px;
+   padding-right:20px;
+   padding-top:30px;
+   /* width: 100%; */
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   max-width: 935px !important;
    min-height: 100vh;
    /* background-color: rgb(206, 255, 134); */
 }
-
 /*============ header start ==========*/
 
 
@@ -141,12 +159,12 @@ section {
 
 @media (max-width: 735px) {
    .header1 {
-      height: 84px;
+      height: 100px;
       margin-left: 16px;
       margin-top: 16px;
       margin-right: 16px;
       margin-bottom: 24px;
-      width: calc(100% - 40px);
+      /* width: calc(100% - 40px); */
       box-sizing: border-box;
    }
 

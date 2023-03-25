@@ -9,3 +9,21 @@ $(function() {
      $('#'+onTab).addClass('on');
    })
  });
+
+
+//  const deleteBtn = document.querySelector(".follower2");
+//  const followUser = document.querySelector("li.followUser");
+//  deleteBtn.setAttribute("", "");
+
+//  deleteBtn.addEventListener("click", function () {
+//   followUser.remove();
+// });
+
+// function removeJS() {
+//   let li = document.querySelector('#li2')
+//   li.remove()
+// }
+
+// function removeClass() {
+//   $('#li1').removeClass()
+// }
