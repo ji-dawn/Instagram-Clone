@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="/static/css/shin/index.css">
     <!-- font awasome -->
     <script src="https://kit.fontawesome.com/b29325fb21.js" crossorigin="anonymous"></script>
-    <!-- jQuery -->
+    <!-- js -->
     <script defer src="/static/js/shin/profile.js"></script>
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -22,13 +23,14 @@
 <body>
     <!-- profile-main : 바탕화면 -->
     <div class="profile_main">
-        <%- include ("./click-profile")%>
-        <%- include ("./follow")%>
-        <%- include ("./follower")%>
-        <!-- section : 컨테이너, 하단공백, 푸터 들어감 -->
+        <!-- section : 컨테이너, 하단공백, 푸터 -->
         <section>
+            <%- include ("../includes/nav")%>
+            <%- include ("./click-profile")%>
+            <%- include ("./follow")%>
+            <%- include ("./follower")%>
             <!-- container : 헤더, 하이라이트, 중간버튼, 콘텐츠 들어감 -->
-            <div class="container">
+            <div class="container2">
                 <!-- header : 프로필 상단 -->
                 <!-- <header> -->
                     <!-- header1 -->
@@ -71,7 +73,7 @@
                     <div class="hilight-box">
                         <ul class="hi-list">
                             <li class="hili">
-                                <div class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
+                                <div  class="hipicdiv"><img class="hipic" src="/static/src/shin/bird.jpg" alt="하이라이트">
                                     <span class="hititle">Now_Playing</span>
                                 </div>
                             </li>
@@ -121,19 +123,20 @@
                 <div id="tab3" class="tabbtn cnt "> 
                     √<%- include("./tagged") %>
                 </div>
+                <!-- ===============under-blank 시작================== -->
+                <!-- ===============under-blank 끝================== -->
+                <!-- ===============footer 시작===============-->
+                <footer>
+                    <%- include("../includes/footer.ejs") %>
+                </footer>
+                <!-- ===============footer 끝===============-->
                 <!-- =========================contents 끝======================== -->
             </div>
             <!--====================== container 끝=================-->
-
-            <!-- ===============under-blank 시작================== -->
             <div class="under-blank"></div>
-            <!-- ===============under-blank 끝================== -->
-
-            <!-- ===============footer 시작===============-->
-            <footer>
-                <%- include("../includes/footer.ejs") %>
-            </footer>
-            <!-- ===============footer 끝===============-->
+            
+            
+            
         </section>
         <!-- =============== section 끝 =============== -->
     </div>
