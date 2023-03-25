@@ -30,6 +30,14 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+$("#btn-mute").click(() => {
+  console.log("clicked");
+  $(".soundless-alert-box").fadeIn();
+  setTimeout(() => {
+    $(".soundless-alert-box").fadeOut();
+  }, 1000);
+});
+
 let onPlay = true;
 // play/pause button event
 $("#btn-play").click(() => {

@@ -50,21 +50,33 @@
     <div class="swiper-container">
       <div class="swiper">
         <div class="story-header">
-          <div class="story-profile-image"></div>
+          <div
+            class="story-profile-image"
+            style="
+              background-image: url('/static/src/Jin/top-bar/reels-<%= imageNum[`0`][1]%>.jpeg');
+            "
+          ></div>
           <div class="story-profile-id">user id</div>
           <button type="button" id="btn-play">
             <i class="fa-solid fa-pause fa-2x" style="color: #ffffff"></i>
           </button>
+          <button type="button" id="btn-mute">
+            <i
+              class="fa-solid fa-volume-xmark fa-2x"
+              style="color: #ffffff"
+            ></i>
+          </button>
         </div>
         <div class="swiper-wrapper">
           <% for (let i = 0; i < 4; i++) {%>
-          <div class="swiper-slide">
-            <img
-              src="/static/src/images/story/story-<%=imageNum %>.jpg"
-              alt="story-image-<%=i %>"
-            />
-          </div>
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('/static/src/images/story/story-<%= imageNum[0][1] * 4 + i %>.jpg');
+            "
+          ></div>
           <% }%>
+          <div class="soundless-alert-box">소리가 없는 동영상입니다.</div>
         </div>
         <!-- pagination -->
         <div class="swiper-pagination"></div>
@@ -73,12 +85,11 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-
     <div class="top-close">
       <a href="/"
-        ><i class="fa-solid fa-xmark fa-4x" style="color: #ffffff"></i
+        ><i class="fa-solid fa-xmark fa-3x" style="color: #ffffff"></i
       ></a>
     </div>
-    <script src="/static/js/story.js"></script>
+    <script src="/static/js/Jihyo/story.js"></script>
   </body>
 </html>
