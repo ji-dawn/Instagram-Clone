@@ -4,5 +4,4 @@ for (let i = 0; i < 8; ++i) {
   btns[i].addEventListener("click", function (event) {
     window.location.replace(`/story/:${i}`);
   });
-  console.log(btns[i]);
 }

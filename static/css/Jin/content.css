@@ -1,11 +1,10 @@
 /* Content ******************************************/
+
 .content {
   width: 100%;
 
   display: flex;
   justify-content: center;
-
-  background-color: rgba(0, 47, 255, 0.127);
 }
 
 .content-main {
@@ -14,16 +13,12 @@
 
   display: flex;
   flex-direction: column;
-
-  background-color: aqua;
 }
 
 /* Top-bar ******************************************/
 .top-bar {
   margin: 16px 0 0;
   padding: 16px 0;
-
-  background-color: violet;
 }
 
 .top-bar-list {
@@ -87,8 +82,6 @@
   margin-bottom: 12px;
   padding-bottom: 20px;
 
-  background-color: whitesmoke;
-
   border-bottom: 1px solid var(--secondary-text-color);
 }
 
@@ -109,8 +102,10 @@
   margin: 8px 4px 8px 5px;
 }
 
+/*D*/
+/* Add gradient circle around content profile header image*/
 .post-header-img {
-  background-color: red;
+  /* background-color: red; */
 }
 
 .post-header-img img {
@@ -159,6 +154,7 @@
 .comment-like {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   margin-bottom: 8px;
 }
@@ -195,7 +191,7 @@
 
 .form-comment textarea {
   width: var(--post-img-width);
-  height: 18px;
+  height: 22px;
   resize: none;
 
   border: none;

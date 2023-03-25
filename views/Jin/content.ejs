@@ -6,20 +6,6 @@
 <!-- Top bar list-->
 <script defer src="../../static/js/Jin/content_top_bar.js"></script>
 
-<!-- Shuffle images every page refresh -->
-<script>
-  const randomId = []; /* Index from 0 to 99*/
-  for (let i = 0; i < 100; ++i) {
-    randomId.push(i);
-  }
-
-  function shuffle(array) {
-    /* Get numbers in -0.5 ~ 0.5 range becomes index of sort() */
-    array.sort(() => Math.random() - 0.5);
-  }
-  shuffle(randomId);
-</script>
-
 <!-- Content -->
 <div class="content">
   <div class="content-main">
@@ -51,7 +37,7 @@
       <div class="post-main">
         <li class="post-main-list">
           <!-- Post body -->
-          <% for (let i = 1; i < 5; ++i) {%>
+          <% for (let i = 0; i < 8; ++i) {%>
           <section class="post-body<%=i %>">
             <!-- Post header -->
             <div class="post-header">
@@ -92,7 +78,8 @@
             <!-- Post image -->
             <button class="post-image">
               <img
-                src="../../static/src/Jin/post/posts-<%=i %>.jpg"
+                id="random-post-image-<%=i %>"
+                src=""
                 alt="post-image-<%=i %>"
               />
             </button>
@@ -250,3 +237,6 @@
     </div>
   </div>
 </div>
+
+<!-- Shuffle images every page refresh -->
+<script src="../../static/js/Jin/shuffle_images.js"></script>

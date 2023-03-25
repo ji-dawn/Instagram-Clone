@@ -47,7 +47,6 @@ app.get("/main", (req, res) => {
 
 for (let i = 0; i < 8; ++i) {
   app.get(`/story/:${i}`, (req, res, next) => {
-    console.log(req.params);
     res.render("jihyo/story", { imageNum: req.params });
   });
 }
